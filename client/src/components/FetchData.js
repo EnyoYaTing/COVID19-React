@@ -35,7 +35,7 @@ class FetchData extends Component {
   }
   
   render() {
-    const { error, isLoaded, world} = this.state;
+    const { error, isLoaded, world, countries} = this.state;
 
     if (error) {
       return <div> Error: {error.message} </div>
@@ -44,7 +44,7 @@ class FetchData extends Component {
     } else {
       return(
         <div>
-          <GlobalCases world={world}/>  
+          <GlobalCases world={world} countries={countries}/>  
         </div>
       );
     } 
